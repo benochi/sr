@@ -34,7 +34,7 @@ with sr.Microphone() as source2:
       speakText("Hello, " + userInput + " you must be lost, there is no Apex Legends here.")
     else:
       speakText("your name is " + userInput)
-    print(userInput)
+    #print(userInput)
   except:
     speakText("No user input was heard.  Check your microphone and try again.")
   
