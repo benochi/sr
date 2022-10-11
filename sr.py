@@ -7,8 +7,12 @@ mic = sr.Recognizer()
 #convert text to speech
 def speakText(command):
   engine = pyttsx3.init()
+  #default is 200, 175 is slower.
+  engine.setProperty('rate', 175)
   engine.say(command)
   engine.runAndWait()
+  #rate = engine.getProperty('rate')
+  #print(rate)
 
 #use mcirophone as source for input
 with sr.Microphone() as source2:
