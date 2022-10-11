@@ -21,7 +21,11 @@ with sr.Microphone() as source2:
   try:
     userInput = r.recognize_google(audio2)
     userInput = userInput.lower()
-    speakText("your name is " + userInput)
+    if userInput == 'dan':
+      speakText("Welcome " + userInput + "you are in control.")
+    else:
+      speakText("your name is " + userInput)
+    print(userInput)
   except:
     speakText("No user input was heard.  Check your microphone and try again.")
   
